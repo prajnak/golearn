@@ -57,4 +57,11 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD)
+	// Slices are reference types. So changes to a slice will affect other
+	// variables that point to the same slice or array.
+
+	//slice is a struct with 3 parts:
+	// - a pointer to where the slice begins
+	// - the length of the slice
+	// - the capacity of the slice
 }

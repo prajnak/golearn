@@ -25,4 +25,29 @@ func main() {
 	// the folllowing line is short for var f string = "short"
 	f := "short"
 	fmt.Println(f)
+
+	// Constants can be integers, booleans or strings
+	const Pi = 3.14159
+	const prefix = "blah__"
+
+	// Integer Types include signed and unsigned types. int and uint have
+	// the same length but specific length depends on the OS being used
+	// var aa int8
+	// var bb int32
+	// c:= a+b //can't do this because of mismatched integer types
+
+	//Floats have two types - float32 and float64 complex numbers are
+	// supported as well complex128 - 64 bit real and 64 bit imaginary
+	var cd complex64 = 5+5i
+	fmt.Printf("Value is : %v", cd)
+
+	// Strings
+	var s string = "hello"
+	// s[0] = 'c' //can't manipulate string types by index
+
+	ccc := []byte(s)
+	ccc[0] = 'c'
+	s2 := string(ccc)
+	fmt.Println(s2, ccc)
+
 }

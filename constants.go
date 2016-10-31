@@ -24,4 +24,14 @@ func main() {
 	// here math.Sin expects a float64.
 	fmt.Println(math.Sin(n))
 
+	// group definitions
+	// use iota to enumerate
+	const(
+		x = iota
+		y
+		z 
+		w
+	)
+
+	fmt.Println(x,y,z,w)
 }
