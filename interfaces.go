@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+import "sort"
 import "strconv"
 
 // Interfaces
@@ -88,6 +88,18 @@ func (p person) String() string {
 	return "Name: " + p.name + ", Age: " + strconv.Itoa(p.age)
 }
 
+// Embedded Interfaces
+
+// Just like structs can be used as anonymous fields in structs, we can have
+// interfaces as anonymous fields in other interfaces. They are called embedded
+// interfaces.
+type Interface interface {
+	sort.Interface
+	Push(x interface{}) //a Push method to push elements into a heap
+	Pop() interface{}   // a Pop mthod that pops elements from a heap
+}
+
+/// Empty interfaces are super useful for collections of different types
 type Element interface{}
 type List []Element
 
